@@ -52,7 +52,7 @@ function updateManPosition(remainingYears) {
 
         const containerWidth = container.offsetWidth;
         const manWidth = man.offsetWidth;
-        const endPosition = pit.offsetLeft - manWidth + 40; 
+        const endPosition = pit.offsetLeft - manWidth + 200; 
         const startPosition = 0;
         const movementRange = endPosition - startPosition;
         const percentageLifeLeft = remainingYears / 80;
