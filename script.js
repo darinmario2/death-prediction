@@ -27,8 +27,8 @@ document.getElementById('predict-btn').addEventListener('click', () => {
 
 function predictRemainingYears(age, food) {
     let baseLifespan = 80;
-    const goodFoods = ['salad', 'fish', 'vegetables', 'fruits', 'oats', 'apple', 'sprouts','bread'];
-    const badFoods = ['pizza', 'burger', 'soda','sandwich', 'chips', 'candy', 'ice cream','biriyani','fried rice','chicken'];
+    const goodFoods = ['salad', 'fish', 'vegetables', 'fruits', 'oats', 'apple', 'sprouts','bread','dairy'];
+    const badFoods = ['pizza', 'burger', 'soda','sandwich', 'chips','chocolates', 'candy', 'ice cream','biriyani','fried rice','parotta','chicken'];
 
     if (goodFoods.includes(food)) {
         baseLifespan += 5;
