@@ -52,22 +52,12 @@ function updateManPosition(remainingYears) {
 
         const containerWidth = container.offsetWidth;
         const manWidth = man.offsetWidth;
-        
-        // Final stopping point is closer to the pit's edge
         const endPosition = pit.offsetLeft - manWidth + 40; 
         const startPosition = 0;
         const movementRange = endPosition - startPosition;
-
-        // How much life is left, as a percentage
         const percentageLifeLeft = remainingYears / 80;
-
-        // By raising the "life left" to a power, we keep him near the start.
-        // If 50% of life is left (0.5), (0.5)^0.2 = 87% of the journey is *still left to go*.
-        // This makes him stay near the start for a long time.
-        const power = 0.2; // A power < 1 on "life left" creates the slow start.
+        const power = 0.2; 
         const journeyLeftToGo = Math.pow(percentageLifeLeft, power);
-
-        // The journey completed is simply 1 minus the journey left to go.
         const journeyCompleted = 1 - journeyLeftToGo;
 
         let newPosition = startPosition + (movementRange * journeyCompleted);        
