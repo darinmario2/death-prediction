@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/736x/91/cb/bd/91cbbd509f5cb6f197d9ea595166aa57.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px; 
+    height: 80%;
+    min-height: 600px;
+    border: 1px solid #ccc;
+    background-color: rgba(103, 102, 102, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.left-side {
+    width: 60%;
+    position: relative;
+    background-color: transparent;
+    padding: 20px;
+}
+
+#man-with-shovel {
+    position: absolute;
+    bottom: 100px;
+    left: 0%;
+    height: 350px;
+    width: auto;
+    transform-origin: center bottom; 
+    transition: left 2s ease-in-out, bottom 2s ease-in-out, transform 1.5s ease-in-out 2s;
+    z-index: 2;
+}
+
+#death-pit {
+    position: absolute;
+    bottom: 50px;
+    right: 10%;
+    width: 280px; 
+    z-index: 1;
+}
+
+#man-with-shovel.is-dead {
+    left: calc(72% - 225px); 
+    bottom: 100px;
+    transform: rotate(50deg) scale(0.40); 
+}
+
+.right-side {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.input-box h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.input-box input, .input-box select, .input-box button {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-box > *:last-child {
+    margin-bottom: 0;
+}
+
+#predict-btn {
+    background-color: #d9534f;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#predict-btn:hover {
+    background-color: #c9302c;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    min-height: 27px;
+}
